@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MajnuKart.pk - Jahan Khareedari Nahi, Dil Ki Barbadi Milti Hai</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/trolls.css">
+</head>
+<body>
+  <div id="tear-container" class="tear-container"></div>
+
+  <div class="breaking-ticker">
+    <div class="ticker-label">🚨 BREAKING NEWS:</div>
+    <div class="ticker-track">
+      <span>Uss ne Instagram story daal di par tera message unread hai...</span>
+      <span>•</span>
+      <span>Gali No. 4 mein 70cc rider par curfew naafiz...</span>
+      <span>•</span>
+      <span>Stock Alert: Self-Respect out of stock since 2019...</span>
+      <span>•</span>
+      <span>Offer: Ek tarfa pyaar par 0% discount + 100% mental fatigue...</span>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="header-container">
+      <div class="brand">
+        <h1 class="logo">💔 Majnu<span>Kart</span>.pk</h1>
+        <p class="tagline">Official E-Commerce Partner of Broken Hearts</p>
+      </div>
+
+      <div class="header-stats">
+        <div class="stat-box">
+          <span class="stat-num" id="live-simps">47</span>
+          <span class="stat-lbl">Active Simps Crying</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">99.8%</span>
+          <span class="stat-lbl">Self-Respect Lost</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="cart-toggle-btn" class="cart-btn" aria-label="View Cart">
+          🛒 Aansoo Cart
+          <span id="cart-badge" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h2>Big Heartbreak Sale: Flat 100% Gham</h2>
+      <p>Kyunki dukaandar bhi majnu hai aur customer bhi friendzoned hai.</p>
+      <div class="coupon-chip">Code: <strong>AMMINAHIMAANEGI</strong> for instant reality check</div>
+    </div>
+  </section>
+
+  <main class="catalog-container">
+    <div class="section-heading">
+      <h3>Dukhi Catalog (Emotional Inventory)</h3>
+      <p>Items guaranteed to accelerate your 3:00 AM overthinking.</p>
+    </div>
+    <div id="product-grid" class="product-grid"></div>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2026 MajnuKart Pakistan. All rights reserved by Mohalla Elders & Rishta Aunties.</p>
+    <p class="disclaimer">Disclaimer: Kisi bhi dil ke tootnay ya blue tick ignore hone ki soorat mein MajnuKart zimmedar nahi.</p>
+  </footer>
+
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="drawer-header">
+      <h3>💔 Tera Cart (Khali Yaadein)</h3>
+      <button id="cart-close-btn" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Total Emotional Damage:</span>
+        <strong id="cart-total-grief">0 Aansoo</strong>
+      </div>
+      <button id="checkout-trigger-btn" class="btn btn-primary full-width">Proceed to Barbaadi (Checkout)</button>
+    </div>
+  </div>
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <div id="checkout-modal" class="modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Gate of Disappointment: Checkout</h3>
+        <button id="checkout-close-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <label class="field-label">Delivery Address:</label>
+        <input type="text" id="delivery-address" class="input-field" value="Gali No. 4, Bahir Khara Hoon Window Dekh Raha Hoon" readonly>
+
+        <label class="field-label">Select Painful Payment Gateway:</label>
+        <div class="payment-methods">
+          <label class="radio-card">
+            <input type="radio" name="payment-method" value="self_respect" checked>
+            <span>Self-Respect (Izzat-e-Nafs)</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="payment-method" value="sadapay">
+            <span>SadaPay (Screen turns sad blue)</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="payment-method" value="royepay">
+            <span>RoyePay (18% Gham Tax Included)</span>
+          </label>
+        </div>
+
+        <label class="field-label">Vulnerability Promo Code:</label>
+        <div class="promo-group">
+          <input type="text" id="coupon-code-input" class="input-field" placeholder="e.g. MAAF_KARDO, ILOVEYOU">
+          <button id="apply-coupon-btn" class="btn btn-secondary">Apply</button>
+        </div>
+        <div id="coupon-feedback" class="coupon-feedback"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="confirm-order-btn" class="btn btn-danger full-width">Confirm Order & Cry</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="exit-modal" class="modal">
+    <div class="modal-card exit-card">
+      <h3>Chorr Ke Ja Rahe Ho? 🥺</h3>
+      <p class="exit-msg">"Aadat ho gayi hogi ab toh chorr kar janay ki..."</p>
+      <p class="exit-sub">Stay and get 0% off on your existing regrets!</p>
+      <div class="modal-actions">
+        <button id="exit-stay-btn" class="btn btn-primary">Theek Hai, Ruk Gaya</button>
+        <button id="exit-leave-btn" class="btn btn-secondary">Mujhe Barbaad Rehne Do</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-widget">
+    <div id="chat-window" class="chat-window hidden">
+      <div class="chat-header">
+        <div class="avatar-info">
+          <span class="chat-avatar">👸</span>
+          <div>
+            <strong>Crush AI (Online)</strong>
+            <small id="chat-status">Typing...</small>
+          </div>
+        </div>
+        <button id="chat-close-btn" class="chat-close">&times;</button>
+      </div>
+      <div id="chat-messages" class="chat-messages">
+        <div class="msg bot">Sunno, shopping karni hai toh karo, dimagh mat khao.</div>
+      </div>
+      <form id="chat-form" class="chat-input-row">
+        <input type="text" id="chat-input" placeholder="Type a 5-paragraph essay..." autocomplete="off">
+        <button type="submit" class="btn btn-send">Send</button>
+      </form>
+    </div>
+    <button id="chat-trigger-btn" class="chat-trigger" aria-label="Open Crush Chat">
+      💬 <span class="chat-ping"></span>
+    </button>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/troll-engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

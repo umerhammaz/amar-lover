@@ -1,0 +1,27 @@
+:root {
+  --bg-dark: #0a0612;
+  --bg-card: #150f24;
+  --bg-hover: #1f1636;
+  --bg-overlay: rgba(8, 4, 16, 0.85);
+
+  --accent-pink: #ff2a85;
+  --accent-rose: #f43f5e;
+  --accent-neon: #ff0055;
+  --accent-cyan: #06b6d4;
+  --accent-gold: #f59e0b;
+
+  --text-main: #f5edfa;
+  --text-muted: #9f8fb4;
+  --text-dark: #221435;
+
+  --border-pink: rgba(255, 42, 133, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --shadow-neon: 0 0 20px rgba(255, 42, 133, 0.25);
+  --shadow-box: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
